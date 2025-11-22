@@ -15,7 +15,8 @@
       "matches": ["https://veloce.marlimar.com/*"],
       "all_frames": true,
       "run_at": "document_idle",
-      "js": ["main.js"]
+      "js": ["main.js"],
+      "css": ["main.css"]
     }
   ]
 }
