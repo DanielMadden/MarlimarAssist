@@ -8,27 +8,21 @@ function main() {
     );
     if (!times.length) return null;
 
-    const latestTimeEl = times[times.length - 1];
+    const latestTimeEl = times[0];
 
+    console.log(latestTimeEl);
     const dateTime = latestTimeEl.getAttribute("datetime");
-    const text = latestTimeEl.textContent.trim();
+    console.log(dateTime);
 
-    return { element: latestTimeEl, dateTime, text };
+    return { element: latestTimeEl, dateTime };
   }
 
-  Array.from(
-    chatWindows.forEach((chatEl) => {
-      const latest = getLatestTimestampForChat(chatEl);
-      if (latest) {
-        console.log(
-          "Chat ID:",
-          chatEl.id,
-          "Latest:",
-          latest.datetime || latest.text
-        );
-      }
-    })
-  );
+  Array.from(chatWindows).forEach((chatEl) => {
+    const latest = getLatestTimestampForChat(chatEl);
+    if (latest) {
+      // console.log(dateTime);
+    }
+  });
 }
 
 setInterval(() => {
