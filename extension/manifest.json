@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "MarlimarAssist",
+  "version": "0.0.0.1",
+  "description": "Marlimar Assistant",
+  "action": {
+    "default_title": "MarlimarAssist",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [],
+
+  "content_scripts": [
+    {
+      "matches": ["https://veloce.marlimar.com/*"],
+      "all_frames": true,
+      "run_at": "document_idle",
+      "js": ["main.js"]
+    }
+  ]
+}
